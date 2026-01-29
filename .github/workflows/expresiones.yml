@@ -7,6 +7,7 @@ on:
         description: 'pon el nombre'
         required: true
         type: string
+        default: 'andres'
   push:
     branches:
       - 'aprendiendo-github-actions'
