@@ -1,26 +1,19 @@
 name: expresiones en actions
-run-name: Estamos aprendiendo expresiones en actions 3
-on:
-  workflow_dispatch:
-    inputs:
-      nombre:
-        description: 'pon el nombre'
-        required: true
-        type: string
-        default: 'andres'
+run-name: Estamos aprendiendo expresiones en actions 4 
+on: 
   push:
     branches:
       - 'aprendiendo-github-actions'
 env:
-  nombre: ${{ 'andres' }}
+  nombre: andres
 
 jobs:
   contiene:
     runs-on: ubuntu-latest
-    if: ${{contains(inputs.nombre, 'andres') }}
+    if: ${{ contains(env.nombre, 'andres') }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
       - name: Correr Script
         run: python main.py
-    
+
