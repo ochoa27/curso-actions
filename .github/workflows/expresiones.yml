@@ -1,6 +1,12 @@
 name: expresiones en actions
 run-name: Estamos aprendiendo expresiones en actions 4
 on: 
+  workflow_dispatch:
+    inputs:
+      nombre: 
+        description: 'ponga el nombre'
+        required: true
+        type: string
   push:
     branches:
       - 'aprendiendo-github-actions'
