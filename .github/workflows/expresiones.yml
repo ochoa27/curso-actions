@@ -1,5 +1,5 @@
 name: expresiones en actions
-run-name: Estamos aprendiendo expresiones en actions 2
+run-name: Estamos aprendiendo expresiones en actions 3
 on:
   workflow_dispatch:
     inputs:
@@ -11,6 +11,8 @@ on:
   push:
     branches:
       - 'aprendiendo-github-actions'
+env:
+  nombre: ${{ 'andres' }}
 
 jobs:
   contiene:
