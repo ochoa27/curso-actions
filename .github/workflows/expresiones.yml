@@ -16,12 +16,12 @@ env:
 jobs:
   contiene:
     runs-on: ubuntu-latest
-    if: ${{ contains(env.nombre, 'andres') }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
       - name: Correr Script
         run: python main.py
       - name: nombre
+        if: ${{ contains(env.nombre, 'andres') }}
         run : echo ${{ env.nombre}} es el nombre actualizado
 
