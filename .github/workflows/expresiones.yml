@@ -5,7 +5,7 @@ on:
     branches:
       - 'aprendiendo-github-actions'
 env:
-  nombre: andres
+  nombre: donaldo
 
 jobs:
   contiene:
