@@ -1,0 +1,23 @@
+name: expresiones en actions
+run-name: Estamos aprendiendo expresiones en actions
+on:
+  workflow_dispatch:
+    inputs:
+      nombre:
+        description: 'pon el nombre'
+        required: true
+        type: string
+  push:
+    branches:
+      - 'aprendiendo-github-actions'
+
+jobs:
+  contiene:
+    runs-on: ubuntu-latest
+    if: ${{contains(inputs.nombre, 'andres') }}
+    steps:
+      - name: checkout
+        uses: actions/checkot@v3
+      - name: Correr Script
+        run: python main.py
+    
