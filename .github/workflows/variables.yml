@@ -10,7 +10,7 @@ env:
   NAME_REPOSOTORY_GIT= ${{ github.repository }}
 
 jobs:
-  imprimir nombres:
+  imprimir:
     runs-on: ubuntu-latest
     steps:
       - name: imprimir nombre repoitorio
