@@ -11,7 +11,6 @@ env:
 
 jobs:
   contexto:
-    if: ${{ contains(env.nombre, 'andres') }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout
