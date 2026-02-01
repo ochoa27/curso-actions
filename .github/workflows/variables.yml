@@ -1,0 +1,22 @@
+name: variables en actions
+
+on:
+  push:
+    branches:
+      - 'aprendiendo-github-actions'
+
+env:
+  NAME_BRANCH: 'aprendiendo-github-action'
+  NAME_REPOSOTORY_GIT: ${{ github.repository }}
+
+jobs:
+  imprimir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir nombre repoitorio
+        run: echo "El repositorio se llama ${{ env.NAME_REPOSOTORY_GIT}} "
+      - name: branch name
+        run: echo " la rama en la que estoy trabajando se llama ${{ env.NAME_BRANCH}}  "
+          
+  
+  
